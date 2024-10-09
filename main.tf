@@ -41,7 +41,7 @@ resource "aws_route_table" "group4_public_rt" {
 }
 
 
-resource "aws_route" "group4_route" {
+resource "aws_route" "group4_routes" {
   route_table_id            = aws_route_table.group4_public_rt.id
   destination_cidr_block    = "0.0.0.0/0"
   gateway_id = aws_internet_gateway.group4_igw.id
