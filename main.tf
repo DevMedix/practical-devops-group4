@@ -84,7 +84,7 @@ resource "aws_security_group" "group4_sg" {
 
 resource "aws_instance" "group4_instance" {
   ami           = data.aws_ami.group4_ubuntu.id
-  instance_type = "t2.medium"
+  instance_type = "t2.micro"
   subnet_id     = aws_subnet.group4_subnet.id
   key_name      = "group4"
   vpc_security_group_ids = [aws_security_group.group4_sg.id]
